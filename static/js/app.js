@@ -58,7 +58,6 @@ function createCharts(sample){
 
 // Create the demographic function
 function metaData(sample){
-    let select=d3.select("#sample-metadata");
 
     d3.json(url).then(function(data){
         let metaData=data.metadata;
@@ -66,9 +65,10 @@ function metaData(sample){
         let metaDataF=metaData.filter(Obj=>Obj.id==sample);
         let newMetaData=metaDataF[0];
 
-        select.html("");
+        let select=d3.select("#sample-metadata").html("");
+        
         Object.entries(newMetaData).forEach(([key,value])=>{
-            select.append("h3").text(`${key}:${value}`);
+            select.append("h5").text(`${key}:${value}`);
         });
     });
 };
@@ -94,7 +94,7 @@ function init(){
 init();
 
 // Create options function
-function newOption(newSample){
+function optionChanged(newSample){
     createCharts(newSample);
     metaData(newSample);
 };
