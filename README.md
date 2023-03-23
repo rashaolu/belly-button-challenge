@@ -26,3 +26,8 @@
 ### 6. Update all the plots when a new sample is selected. Additionally, you are welcome to create any layout that you would like for your dashboard.
 
 ### 7. Deploy your app to a free static page hosting service, such as GitHub Pages.
+
+### References
+#### https://plotly.com/javascript/histograms/
+#### https://stackoverflow.com/search?q=drop+down+selector+java+script&s=2d8e5b55-671b-4071-919e-5a593b1c5e1e
+#### https://plotly.com/javascript/bubble-charts/ 
